@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 360vh;
+}
+
+
+.slide {
+    padding: 100px 20px;
+    margin-top: 5vh;
+    margin-left: 45vh;
+    width: 1%;
+    height: 100%;
+    position: relative;
+    transition: 0.3s ease 0s;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.timeline {
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 700px;
+    position: relative;
+}
+
+.timeline .container::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: inherit;
+    z-index: 1;
+}
+
+.timeline .container:nth-child(odd) .card {
+    left: 45px;
+}
+
+.timeline .container:nth-child(odd) .card {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #f45b69 transparent transparent;
+}
+
+.timeline .container:nth-child(even) .card {
+    left: -439px;
+}
+
+.timeline .container:nth-child(even) .card {
+    right: -15px;
+    border-width: 8px 0 8px 16px;
+}
+
+
+
+
+
+
+
+
+
+.timeline::before {
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    margin-left: -1px;
+    content: "";
+
+}
+
+.slide::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+}
+
+.container .card {
+
+    position: relative;
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    width: 350px;
+    height: 300px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.35);
+    transition: 0.6s;
+
+
+}
+
+.container .card:hover {
+    height: 400px;
+}
+
+.container .card .imgBx {
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background: #333333;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 1s;
+
+
+}
+
+.container .card:hover .imgBx {
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.35);
+
+}
+
+.container .card .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+h2 {
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--clr);
+}
+.container .card .content {
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    padding: 0 30px;
+    height: 20px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.6s;
+}
+.container .card:hover .content {
+    height: 250px;
+    line-height: 1.5;
+    top: 130px;
+}
+
+
+
+/* #go {
+    position: fixed;
+    margin-bottom: 5.6vh;
+    margin-right: -136vh;
+    background-image: url("../../sources/300.jpg");
+    height: 300px;
+    width: 456px;
+    transition: 0.5s;
+
+}
+
+#go:hover {
+    scale: 1.34;
+} */
+
+
+
+
+
+
+
+
+
+
+

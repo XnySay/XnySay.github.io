@@ -1,0 +1,233 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    bottom: 0;
+    text-decoration: none;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg,#bec936,#1772b4);
+    height: 100vh;
+}
+
+
+
+/*主页面*/
+.wrapper {
+    position: relative;
+    height: 100vh;
+}
+
+/*左上标题*/
+.top-kv-text {
+    position : fixed;
+    top: 2.6vw;
+    left: 27px;
+    width: 631px;
+    height: 100px;
+    background-image: url("../../sources/Index/logo.png");
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.main {
+    height: 70vh;
+    position: relative;
+    /*padding-left: 4vh;*/
+    padding-top: 160px;
+    z-index: 1;
+}
+
+
+/*主页风景轮播图*/
+.shell{
+    width: 1100px;
+    height: 600px;
+    position: relative;
+    overflow-x: hidden;
+    border-radius: 5px;
+    border: 10px #fff solid;
+    box-shadow: 20px 30px 20px rgba(0,0,0,.5);
+}
+.images{
+    width: 300%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: .2s;
+
+}
+.img {
+    width: 100%;
+    background-size: 100% 100%;
+}
+.img:nth-child(1) {
+    background-image: url("../../sources/Index/A.jpg");
+}
+.img:nth-child(2) {
+    background-image: url("../../sources/Index/B.jpg");
+}
+.img:nth-child(3) {
+    background-image: url("../../sources/Index/C.jpg");
+}
+.min-images{
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 20px;
+    width: 40%;
+    z-index: 999;
+    right: 10%;
+}
+.min{
+    width: 60px;
+    height: 60px;
+    /* 鼠标悬浮时显示按钮指针 */
+    cursor: pointer;
+    border-radius: 50%;
+    background-size: cover;
+    border: solid 5px rgba(255,255,255,0.5);
+    /* 照片偏移量 */
+    background-position: -20px 0;
+}
+.min:nth-child(1){
+    background-image: url("../../sources/Index/A.jpg");
+}
+.min:nth-child(2){
+    background-image: url("../../sources/Index/B.jpg");
+}
+.min:nth-child(3){
+    background-image: url("../../sources/Index/C.jpg");
+}
+.button{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+}
+.button-left,
+.button-right{
+    font-size: 50px;
+    /*background-color: rgba(160,190,255,0.7);*/
+    padding: 0 20px;
+    line-height: 500px;
+    cursor: pointer;
+}
+
+
+audio {
+    width: 100%;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.mail:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+.mail {
+    text-decoration: none;
+    color: blueviolet;
+    position: relative;
+    display: inline-block;
+}
+
+.mail::before {
+    content: attr(这是我们的电子邮件，欢迎大家来联系我们);
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mail:hover::before {
+    display: block;
+    opacity: 1;
+}
+
+
+
+/*页脚*/
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    z-index: 1;
+}
+.footer-inner {
+    display: flex;
+    align-items: center;
+    padding: 0 1.538vw;
+}
+.footer-logo {
+    max-width: 292px;
+    width: 148px;
+}
+.logo {
+    max-width: 100%;
+    vertical-align: bottom;
+    background-size: cover;
+}
+small {
+    font-size: 20px;
+    line-height: 1.8;
+    margin-left: 20px;
+}
+
+/*右下前进图标*/
+#advance{
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    max-width: 130%;
+    width : 240px;
+    height: 200px;
+}
+.btn-start {
+    position: fixed;
+    bottom: 9vh;
+    right: 2.6vw;
+    height: 200px;
+    width: 240px;
+    z-index: 3;
+    transition: .5s ease-in-out;
+    overflow: hidden;
+}
+.btn-start img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+.btn-start:hover {
+    transform: scale(1.3);
+}
+
+
+
+

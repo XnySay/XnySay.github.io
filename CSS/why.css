@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #eee;
+}
+
+.typing.animate {
+    width: 24ch;
+    border-right: 0.1em solid black;
+    font-family: monospace;
+    font-size: 2em;
+    /*animation: type 2.4s steps(24), writer 1s infinite alternate, delete 1.2s steps(12) 3.6s, type2 1.2s steps(12) 4.8s forwards, type3 1.2s steps(12, end) 6s forwards;*/
+    animation: type 2.4s steps(24), writer 1s infinite alternate, delete 1.2s steps(12) 3.6s forwards, type2 1.2s steps(12) 4.8s forwards, type3 2.2s steps(22, end) 7s forwards;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.typing.animate::before {
+    content: "你好，我们是我们做的都队，你为什么喜欢杭州呢？";
+}
+
+@keyframes type {
+    from {
+        width: 0;
+        content: "你好，我们是我们做的都队"
+    }
+    to {
+        width: 24ch;
+        content: "你好，我们是我们做的都队"
+    }
+}
+
+@keyframes type2 {
+    from {
+        width: 12ch;
+        content: "你好，我们是我们做的都队"
+    }
+    to {
+        width: 24ch;
+        content: "你好，我们是我们做的都队"
+    }
+}
+
+@keyframes type3 {
+    from {
+        width: 24ch;
+        content: "你好，我们是我们做的都队，你为什么喜欢杭州呢？"
+    }
+    to {
+        width: 46ch;
+        content: "你好，我们是我们做的都队，你为什么喜欢杭州呢？"
+    }
+}
+
+@keyframes writer {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes delete {
+    from {
+        width: 24ch;
+    }
+    to {
+        width: 12ch;
+    }
+}
+
+
+
+
+@keyframes appear {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+
+#advance{
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    max-width: 130%;
+    width : 240px;
+    height: 200px;
+}
+.btn-start {
+    position: fixed;
+    bottom: 9vh;
+    right: 2.6vw;
+    height: 200px;
+    width: 240px;
+    z-index: 3;
+    transition: .5s ease-in-out;
+    overflow: hidden;
+
+    animation-name: appear;
+    animation-duration: 1.8s;
+    animation-delay: 8s;
+    animation-fill-mode: both;
+
+}
+.btn-start img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+.btn-start:hover {
+    transform: scale(1.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
